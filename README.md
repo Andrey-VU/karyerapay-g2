@@ -1,12 +1,12 @@
 # ПСИК 
-~~Платёжно-расчётная система игры КарьерА~~
+__Платёжно-расчётная система игры КарьерА__
 
 Приложение для осуществление платёжных операций для экономической игры-симуляции [КарьерА](https://karyera-game.ru/) 
 [Функциональные требования и пользовательские сценарии](https://disk.yandex.ru/i/yrcG8ZtPyOnHXg)
 
 
-# Diagram
-![schema.png](schema.png)
+# ER Diagram
+![schema](schema.png)
 
 ([click here to edit](https://dbdiagram.io/d/6517625fffbf5169f0c445b3)) 
 
