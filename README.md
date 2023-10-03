@@ -6,9 +6,9 @@ __Платёжно-расчётная система игры КарьерА__
 
 
 # ER Diagram
-![schema](schema.png)
+![schema](er-karyerapay.png)
 
-([click here to edit](https://dbdiagram.io/d/6517625fffbf5169f0c445b3)) 
+([click here to edit](https://dbdiagram.io/d/ER-Karyerapay-651c18e7ffbf5169f0f20d5a)) 
 
 # Команда разработчиков
 1. Андрей Устюжанин (Руководитель проекта, Тимлид)
