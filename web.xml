@@ -1,0 +1,13 @@
+<http pattern="/securityNone" security="none"/>
+<http use-expressions="true">
+    <intercept-url pattern="/**" access="isAuthenticated()" />
+    <http-basic />
+</http>
+
+<authentication-manager>
+    <authentication-provider>
+        <user-service>
+            <user name="user1" password="{noop}test" authorities="ROLE_USER" />
+        </user-service>
+    </authentication-provider>
+</authentication-manager>
