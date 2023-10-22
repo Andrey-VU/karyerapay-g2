@@ -5,6 +5,9 @@ import org.mockito.Mockito;
 import org.springframework.mail.javamail.JavaMailSender;
 import ru.karyeragame.paymentsystem.exceptions.InvalidEmail;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class EmailServiceTest {
@@ -13,11 +16,14 @@ class EmailServiceTest {
 
     @Test
     void sendMail() {
+        Set<String> to = new HashSet<>();
+        to.add("example.example.com");
+
         assertThrows(InvalidEmail.class, () -> emailService.sendMail("god@universe.com",
-                new String[] {"example.example.com"}, "Test", "Test body"));
+                to, "Test", "Test body"));
 
         assertThrows(InvalidEmail.class, () -> emailService.sendHtmlMail("god@universe.com",
-                new String[] {"example.example.com"}, "Test",
+                to, "Test",
                 "<h1>This is a test Spring Boot email</h1><p>It can contain <strong>HTML</strong> content.</p>"));
     }
 }

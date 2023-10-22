@@ -16,6 +16,6 @@ public class ErrorHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public Map<String, String> handleUnknownStateException(final InvalidEmail exception) {
         log.warn(exception.getMessage());
-        return Map.of("error", "Mail can't be sent out");
+        return Map.of("error", "Письмо не может быть отправлено");
     }
 }
