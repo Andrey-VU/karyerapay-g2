@@ -1,11 +1,14 @@
-package ru.karyeragame.paymentsystem.common.auth;
+package ru.karyeragame.paymentsystem.security.authentication;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.karyeragame.paymentsystem.config.JwtService;
+import ru.karyeragame.paymentsystem.security.authentication.dto.AuthenticationRequest;
+import ru.karyeragame.paymentsystem.security.authentication.dto.AuthenticationResponse;
+import ru.karyeragame.paymentsystem.security.authentication.dto.RegisterRequest;
+import ru.karyeragame.paymentsystem.security.config.JwtService;
 import ru.karyeragame.paymentsystem.user.Role;
 import ru.karyeragame.paymentsystem.user.dto.UserFullDto;
 import ru.karyeragame.paymentsystem.user.repository.UserDbRepository;
@@ -19,6 +22,11 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
+    /**
+     * Добавить отправитель электронных писем
+     * для отправки приветственного письма на почту пользователя при регистрации
+     */
+
     public AuthenticationResponse register(RegisterRequest request) {
         var user = UserFullDto.builder()
                 .nickname(request.getNickname())
@@ -28,6 +36,9 @@ public class AuthenticationService {
                 .build();
         repository.create(user);
         var jwtToken = jwtService.generateToken(user);
+        /**
+         * Добавляем сюда отправку письма
+         */
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();

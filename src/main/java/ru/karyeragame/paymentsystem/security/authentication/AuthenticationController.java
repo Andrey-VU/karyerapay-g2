@@ -1,4 +1,4 @@
-package ru.karyeragame.paymentsystem.common.auth;
+package ru.karyeragame.paymentsystem.security.authentication;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import ru.karyeragame.paymentsystem.common.validation.AuthenticationValid;
 import ru.karyeragame.paymentsystem.common.validation.Create;
+import ru.karyeragame.paymentsystem.security.authentication.dto.AuthenticationRequest;
+import ru.karyeragame.paymentsystem.security.authentication.dto.AuthenticationResponse;
+import ru.karyeragame.paymentsystem.security.authentication.dto.RegisterRequest;
 
 @Controller
 @RequestMapping("/karyera-game/auth")

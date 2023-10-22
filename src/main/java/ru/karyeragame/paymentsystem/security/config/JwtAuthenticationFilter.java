@@ -1,4 +1,4 @@
-package ru.karyeragame.paymentsystem.config;
+package ru.karyeragame.paymentsystem.security.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

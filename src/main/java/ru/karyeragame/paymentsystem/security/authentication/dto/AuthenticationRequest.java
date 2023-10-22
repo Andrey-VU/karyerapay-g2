@@ -1,4 +1,4 @@
-package ru.karyeragame.paymentsystem.common.auth;
+package ru.karyeragame.paymentsystem.security.authentication.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -8,8 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.karyeragame.paymentsystem.common.validation.AuthenticationValid;
-import ru.karyeragame.paymentsystem.common.validation.Create;
-import ru.karyeragame.paymentsystem.common.validation.Update;
 
 @Data
 @Builder

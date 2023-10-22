@@ -1,4 +1,4 @@
-package ru.karyeragame.paymentsystem.config;
+package ru.karyeragame.paymentsystem.security.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

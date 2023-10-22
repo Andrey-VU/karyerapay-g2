@@ -1,4 +1,4 @@
-package ru.karyeragame.paymentsystem.common.auth;
+package ru.karyeragame.paymentsystem.security.authentication.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package ru.karyeragame.paymentsystem.common.demo;
+package ru.karyeragame.paymentsystem.security.demo;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
