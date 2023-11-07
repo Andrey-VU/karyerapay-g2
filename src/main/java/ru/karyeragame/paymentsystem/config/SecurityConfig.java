@@ -19,7 +19,7 @@ public class SecurityConfig {
         httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorizeHttpRequest) -> authorizeHttpRequest
-                .requestMatchers(mvcMatcherBuilder.pattern("/**")).permitAll()
+                .requestMatchers(mvcMatcherBuilder.pattern("/**")).authenticated()
                 .anyRequest().authenticated())
                 .httpBasic(withDefaults());
         return httpSecurity.build();
