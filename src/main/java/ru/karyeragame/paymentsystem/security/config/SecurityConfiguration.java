@@ -26,7 +26,7 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
                         requests -> requests.requestMatchers(new AntPathRequestMatcher("/karyera-game/auth/**"))
-                                .permitAll()
+                                .authenticated()
                                 .anyRequest()
                                 .authenticated()
                 )
